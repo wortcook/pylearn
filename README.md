@@ -1,2 +1,2 @@
 # pylearn
-Python learning
+Python learning - Base directory
