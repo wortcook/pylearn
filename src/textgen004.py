@@ -23,12 +23,14 @@ BATCH_SIZE = 300
 # it maintains a buffer in which it shuffles elements).
 BUFFER_SIZE = 10000
 
-PRODUCTION_TEMP=0.8
+start_text = input("Enter a starting text: ")
+start_temp = input("Enter a temperature: ")
 
+start_temp = float(start_temp)
 
 
 class OneStep(tf.keras.Model):
-  def __init__(self, model, chars_from_ids, ids_from_chars, temperature=PRODUCTION_TEMP):
+  def __init__(self, model, chars_from_ids, ids_from_chars, temperature=start_temp):
     super().__init__()
     self.temperature = temperature
     self.model = model
@@ -71,8 +73,6 @@ class OneStep(tf.keras.Model):
     # Return the characters and model state.
     return predicted_chars, states
 
-
-start_text = input("Enter a starting text: ")
 
 # Read, then decode for py2 compat.
 text = open('./assets/monty_season_1.txt', 'rb').read().decode(encoding='utf-8')
