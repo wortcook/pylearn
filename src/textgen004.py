@@ -4,7 +4,7 @@ import numpy as np
 import os
 import time
 
-ITERATIONS = 100
+ITERATIONS = 1000
 EPOCHS = 1
 num_generate = 1000
 
