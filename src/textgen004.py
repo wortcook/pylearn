@@ -5,17 +5,17 @@ import os
 import time
 
 ITERATIONS = 100
-EPOCHS = 2
-num_generate = 2000
+EPOCHS = 1
+num_generate = 1000
 
 # The embedding dimension
-embedding_dim = 1024
+embedding_dim = 1200
 
 # Number of RNN units
-rnn_units = 1024
+rnn_units = 1200
 
 # Batch size
-BATCH_SIZE = 256
+BATCH_SIZE = 300
 
 # Buffer size to shuffle the dataset
 # (TF data is designed to work with possibly infinite sequences,
@@ -79,6 +79,14 @@ text = open('./assets/monty_season_1.txt', 'rb').read().decode(encoding='utf-8')
 text = text + ' ' + open('./assets/monty_season_2.txt', 'rb').read().decode(encoding='utf-8')
 text = text + ' ' + open('./assets/monty_season_3.txt', 'rb').read().decode(encoding='utf-8')
 text = text + ' ' + open('./assets/monty_season_4.txt', 'rb').read().decode(encoding='utf-8')
+text = text + ' ' + open('./assets/holy_grail_1.txt', 'rb').read().decode(encoding='utf-8')
+text = text + ' ' + open('./assets/holy_grail_2.txt', 'rb').read().decode(encoding='utf-8')
+text = text + ' ' + open('./assets/holy_grail_3.txt', 'rb').read().decode(encoding='utf-8')
+text = text + ' ' + open('./assets/meaning_1.txt', 'rb').read().decode(encoding='utf-8')
+text = text + ' ' + open('./assets/meaning_2.txt', 'rb').read().decode(encoding='utf-8')
+text = text + ' ' + open('./assets/meaning_3.txt', 'rb').read().decode(encoding='utf-8')
+
+
 # length of text is the number of characters in it
 print(f'Length of text: {len(text)} characters')
 
