@@ -100,7 +100,6 @@ print(text[:250])
 vocab = sorted(set(text))
 print(f'{len(vocab)} unique characters')
 
-print(vocab)
 
 example_texts = ['abcdefg', 'xyz']
 
