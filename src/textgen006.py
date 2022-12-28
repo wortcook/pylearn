@@ -9,13 +9,13 @@ EPOCHS = 1
 num_generate = 1000
 
 # The embedding dimension
-embedding_dim = 1200
+embedding_dim = 1500
 
 # Number of RNN units
-rnn_units = 1200
+rnn_units = 1500
 
 # Batch size
-BATCH_SIZE = 300
+BATCH_SIZE = 50
 
 # Buffer size to shuffle the dataset
 # (TF data is designed to work with possibly infinite sequences,
